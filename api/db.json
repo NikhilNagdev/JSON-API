@@ -1,0 +1,25 @@
+{
+    "posts": [{
+        "id" : 1,
+        "title": "Post one",
+        "body": "Body of post one",
+        "author": "Nikhil"
+    },
+    {
+        "id" : 2,
+        "title": "Post two",
+        "body": "Body of post two",
+        "author": "Nikhil Nagdev"
+    },
+    {
+        "id" : 3,
+        "title": "Post three",
+        "body": "Body of post three",
+        "author": "Nikhil Nagdev"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "Comment on post one",
+        "postId": 1
+    }]
+}
