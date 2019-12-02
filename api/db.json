@@ -13,10 +13,10 @@
       "author": "Nikhil Nagdev"
     },
     {
-      "id": 3,
       "title": "Post three",
       "body": "Body of post three",
-      "author": "Nikhil Nagdev"
+      "author": "Nikhi",
+      "id": 3
     }
   ],
   "comments": [

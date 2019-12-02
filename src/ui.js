@@ -57,6 +57,13 @@ class UI{
             alert.remove();
         }
     }
+
+    fillModalData(postData){
+        this.edit_post_id.value = postData.id;
+        this.edit_post_title.value = postData.title;
+        this.edit_post_author.value = postData.author;
+        edit_post_body.value = postData.body;
+    }
 }
 
 const ui = new UI();

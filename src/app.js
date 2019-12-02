@@ -9,9 +9,9 @@ document.getElementById('add_post_btn').addEventListener('click', addPost);
 
 document.getElementById('posts').addEventListener('click', deletePost);
 
-// document.getElementById('posts').addEventListener('click', editPost);
+document.getElementById('posts').addEventListener('click', editPost);
 
-// document.getElementById('edit_post_btn').addEventListener('click', updatePostData);
+document.getElementById('edit_post_btn').addEventListener('click', updatePostData);
 
 function fetchPosts(){
     http.get('http://localhost:3000/posts')
@@ -54,4 +54,38 @@ function deletePost(e){
     }
 }
 
+
+function editPost(e) {
+    e.preventDefault();
+    if (e.target.classList.contains('edit')) {
+        const id = e.target.dataset.id;
+
+        http.get(`http://localhost:3000/posts/${id}`)
+            .then(data => ui.fillModalData(data))
+            .catch(err => console.log(err));
+    }
+}
+
+function updatePostData() {
+    const edit_post_title = document.getElementById('edit_post_title').value;
+    const edit_post_author = document.getElementById('edit_post_author').value;
+    const edit_post_body = document.getElementById('edit_post_body').value;
+    const edit_post_id = document.getElementById('edit_post_id').value;
+
+    const data = {
+        title: edit_post_title,
+        body: edit_post_body,
+        author: edit_post_author
+    };
+
+    http.put(`http://localhost:3000/posts/${edit_post_id}`, data)
+        .then(data => {
+            ui.showAlert('Post Updated Successfully', 'alert alert-success');
+            fetchPosts();
+        })
+        .catch(err => console.log(err));
+
+    $('#modalEdit').modal('hide');
+    // $('#modalEdit').modal('dispose');
+}
 
