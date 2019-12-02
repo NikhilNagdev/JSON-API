@@ -41,6 +41,22 @@ class UI{
         this.post_author.value = "";
         this.post_body.value = "";
     }
+
+    showAlert(message, classList) {
+        this.clearAlert();
+        const div = document.createElement('div');
+        div.classList = classList;
+        div.appendChild(document.createTextNode(message));
+        this.post_container.insertBefore(div, this.posts_wrapper);
+        setTimeout(() => this.clearAlert(), 3000);
+    }
+
+    clearAlert() {
+        const alert = document.querySelector('.alert');
+        if (alert) {
+            alert.remove();
+        }
+    }
 }
 
 const ui = new UI();

@@ -9,9 +9,9 @@ document.getElementById('add_post_btn').addEventListener('click', addPost);
 
 document.getElementById('posts').addEventListener('click', deletePost);
 
-document.getElementById('posts').addEventListener('click', editPost);
+// document.getElementById('posts').addEventListener('click', editPost);
 
-document.getElementById('edit_post_btn').addEventListener('click', updatePostData);
+// document.getElementById('edit_post_btn').addEventListener('click', updatePostData);
 
 function fetchPosts(){
     http.get('http://localhost:3000/posts')
@@ -37,6 +37,21 @@ function addPost(){
         })
         .catch(err => console.log(`Error ${err}`))
 
+}
+
+function deletePost(e){
+    e.preventDefault();
+    if (e.target.classList.contains('delete')) {
+        const id = e.target.dataset.id;
+        if (confirm('Are you sure you want to delete?')) {
+            http.delete(`http://localhost:3000/posts/${id}`)
+                .then(data => {
+                    ui.showAlert('Post Deleted Successfully!', 'alert alert-success');
+                    fetchPosts();
+                })
+                .catch(err => console.log(err));
+        }
+    }
 }
 
 

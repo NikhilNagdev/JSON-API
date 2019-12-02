@@ -17,18 +17,6 @@
       "title": "Post three",
       "body": "Body of post three",
       "author": "Nikhil Nagdev"
-    },
-    {
-      "title": "Post 4",
-      "author": "Nagdev",
-      "body": "Body",
-      "id": 4
-    },
-    {
-      "title": "Post 5",
-      "author": "Nikhil",
-      "body": "Post 5 body",
-      "id": 5
     }
   ],
   "comments": [
