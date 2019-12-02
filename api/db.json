@@ -1,25 +1,41 @@
 {
-    "posts": [{
-        "id" : 1,
-        "title": "Post one",
-        "body": "Body of post one",
-        "author": "Nikhil"
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post one",
+      "body": "Body of post one",
+      "author": "Nikhil"
     },
     {
-        "id" : 2,
-        "title": "Post two",
-        "body": "Body of post two",
-        "author": "Nikhil Nagdev"
+      "id": 2,
+      "title": "Post two",
+      "body": "Body of post two",
+      "author": "Nikhil Nagdev"
     },
     {
-        "id" : 3,
-        "title": "Post three",
-        "body": "Body of post three",
-        "author": "Nikhil Nagdev"
-    }],
-    "comments": [{
-        "id": 1,
-        "body": "Comment on post one",
-        "postId": 1
-    }]
+      "id": 3,
+      "title": "Post three",
+      "body": "Body of post three",
+      "author": "Nikhil Nagdev"
+    },
+    {
+      "title": "Post 4",
+      "author": "Nagdev",
+      "body": "Body",
+      "id": 4
+    },
+    {
+      "title": "Post 5",
+      "author": "Nikhil",
+      "body": "Post 5 body",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Comment on post one",
+      "postId": 1
+    }
+  ]
 }

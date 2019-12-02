@@ -35,6 +35,12 @@ class UI{
         });
         this.posts_wrapper.innerHTML = output;
     }
+
+    clearAllFields() {
+        this.post_title.value = "";
+        this.post_author.value = "";
+        this.post_body.value = "";
+    }
 }
 
 const ui = new UI();
